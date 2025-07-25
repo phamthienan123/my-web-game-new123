@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý Admin</title>
+</head>
+<body>
+    <h1>Xin chào Admin!</h1>
+    <h2>Danh sách tài khoản người dùng</h2>
+    <ul>
+        {% for username, info in users.items() %}
+        <li>{{ username }} - {{ info.diamonds }} 💎</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
