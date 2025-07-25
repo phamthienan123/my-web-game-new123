@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <h1>Đăng nhập</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label for="username">Tài khoản:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label for="password">Mật khẩu:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
+    <p><a href="/register">Tạo tài khoản mới</a></p>
+</body>
+</html>
