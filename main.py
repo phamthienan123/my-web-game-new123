@@ -113,7 +113,9 @@ def sell_item(item):
 def admin():
     if 'username' not in session or session['username'] != 'admin':
         return redirect('/')
-    users = {u: data for u, data in USERS.items() if u != 'admin'}
+    with open('users.json','r') as f
+        users=json.load(f)
+    with open('items.json','r') as f
     return render_template('admin.html', users=users, items=ITEMS)
 
 @app.route('/give/<username>', methods=['POST'])
